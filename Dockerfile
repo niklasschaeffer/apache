@@ -6,7 +6,7 @@ RUN apt-get install wget curl build-essential ntp -y
 RUN echo 'deb http://packages.dotdeb.org jessie all' > /etc/apt/sources.list.d/dotdeb.list
 RUN curl http://www.dotdeb.org/dotdeb.gpg | apt-key add -
 RUN cd /root && wget http://www.ijg.org/files/jpegsrc.v9b.tar.gz && tar xvfz jpegsrc.v9b.tar.gz && cd jpeg-9b && ./configure && make && make install
-RUN apt-get update && apt-get install apt-utils curl git apache2 libapache2-mod-php7.0 php7.0-cli php7.0 php7.0-gd php7.0-mcrypt php7.0-curl php7.0-pgsql php7.0-imagick php7.0-intl php7.0-mysql php7.0-memcached php7.0-mbstring php7.0-opcache php7.0-xml php-pear php7.0-dev tofrodos nano vim wget -y
+RUN apt-get update && apt-get install apt-utils curl git apache2 libapache2-mod-php7.0 php7.0-cli php7.0 php7.0-gd php7.0-mcrypt php7.0-curl php7.0-pgsql php7.0-imagick php7.0-intl php7.0-mysql php7.0-memcached php7.0-mbstring php7.0-opcache php7.0-xml php-pear php7.0-xdebug php7.0-dev tofrodos nano vim wget -y
 
 RUN git clone https://github.com/codeb2cc/phpMemcachedAdmin.git /var/www/memcachedadmin
 RUN chown -R www-data:www-data /var/www/memcachedadmin
